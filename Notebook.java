@@ -42,7 +42,8 @@ public class Notebook {
      * @param indiNote The note to be added
      */
     public void addNote(String indiNote) {
-        notes.add(indiNote);
+        if(!notes.contains(indiNote))
+            notes.add(indiNote);
     }
 
     /**

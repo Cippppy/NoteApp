@@ -15,15 +15,23 @@ public class NotebookTest {
         unit1.setNotes(ideas);
         System.out.println(unit1.getNotes());
         System.out.println(unit1.numberOfNotes());
+
         unit1.addNote("Eat");
         System.out.println(unit1.getNotes());
         System.out.println(unit1.numberOfNotes());
+
         unit1.deleteNote(2);
         System.out.println(unit1.getNotes());
         System.out.println(unit1.numberOfNotes());
+
         unit1.getNoteNumber("Idea 1");
         unit1.getNote(0);
         unit1.setNote("Not Idea 1", 0);
+        System.out.println(unit1.getNotes());
+        System.out.println(unit1.numberOfNotes());
+
+        unit1.addNote("Eat");
+        unit1.addNote("Eat");
         System.out.println(unit1.getNotes());
         System.out.println(unit1.numberOfNotes());
 
