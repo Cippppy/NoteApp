@@ -4,6 +4,7 @@ import java.util.ArrayList;
  * Creates a notebook object that holds different notes
  * 
  * @author Christian Cipolletta
+ * @version 1/20/23
  */
 public class Notebook {
 
@@ -85,5 +86,28 @@ public class Notebook {
         notes.set(position, note);
     }
 
+    /**
+     * Moves the note of interest up one index
+     * 
+     * @param note the value of the note to be moved
+     */
+    public void moveNoteUp(String note) {
+        int tempIndex = notes.indexOf(note);
+        String tempNote = notes.get(tempIndex-1);
+        notes.set(tempIndex-1, note);
+        notes.set(tempIndex, tempNote);
+    }
+
+    /**
+     * Moves the note of interest down one index
+     * 
+     * @param note the value of the note to be moved
+     */
+    public void moveNoteDown(String note) {
+        int tempIndex = notes.indexOf(note);
+        String tempNote = notes.get(tempIndex+1);
+        notes.set(tempIndex+1, note);
+        notes.set(tempIndex, tempNote);
+    }
 }
 
