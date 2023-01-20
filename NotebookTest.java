@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 
+/**
+ * Tests the methods of the Notebook class
+ */
 public class NotebookTest {
 
     public static void main(String[] args) {
