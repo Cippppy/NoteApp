@@ -11,7 +11,7 @@ public class Notebook {
     /**
      * This creates the arraylist that holds the notes for the Notebook object
      */
-    private ArrayList<String> notes;
+    private ArrayList<String> notes = new ArrayList<String>();
 
     /**
      * Lists the notes inside of the Notebook object
