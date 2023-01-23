@@ -99,7 +99,7 @@ public class NotebookTest {
          * Tests the moveNoteToTop method by moving "Eat" to index 0
          * Prints out the getNotes and numberOfNotes functions to ensure proper results
          */
-        moveNoteToTop(unit1, "Eat");
+        unit1.moveNoteToTop("Eat");
         System.out.println(unit1.getNotes());
         System.out.println(unit1.numberOfNotes());
 
@@ -107,7 +107,7 @@ public class NotebookTest {
          * Tests the moveNoteToBottom method by moving "Eat" to the last index of the notebook
          * Prints out the getNotes and numberOfNotes functions to ensure proper results
          */
-        moveNoteToBottom(unit1, "Eat");
+        unit1.moveNoteToBottom("Eat");
         System.out.println(unit1.getNotes());
         System.out.println(unit1.numberOfNotes());
     }
@@ -132,32 +132,6 @@ public class NotebookTest {
      */
     public static void moveNoteDownMultiple(Notebook uut, String note) {
         for (int i=0; i<2; i++) {
-            uut.moveNoteDown(note);
-        }
-    }
-
-    /**
-     * Moves the selected note to the top of the list
-     * 
-     * @param uut the notebook object
-     * @param note the note to be moved
-     */
-    public static void moveNoteToTop(Notebook uut, String note) {
-        int spotsToMove = uut.getNoteNumber(note);
-        for (int i=0; i<spotsToMove; i++) {
-            uut.moveNoteUp(note);
-        }
-    }
-
-    /**
-     * Moves the selected note to the bottome of the list
-     * 
-     * @param uut the notebook object
-     * @param note the note to be moved
-     */
-    public static void moveNoteToBottom(Notebook uut, String note) {
-        int spotsToMove = uut.numberOfNotes()-1;
-        for (int i=0; i<spotsToMove; i++) {
             uut.moveNoteDown(note);
         }
     }

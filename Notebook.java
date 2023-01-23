@@ -112,5 +112,26 @@ public class Notebook {
         notes.set(tempIndex+1, note);
         notes.set(tempIndex, tempNote);
     }
+
+    /**
+     * Moves the selected note to the top of the list
+     * 
+     * @param note the note to be moved
+     */
+    public void moveNoteToTop(String note) {
+        notes.remove(note);
+        notes.add(0, note);
+    }
+
+    /**
+     * Moves the selected note to the bottom of the list
+     * 
+     * @param note the note to be moved
+     */
+    public void moveNoteToBottom(String note) {
+        int tempLength = notes.size()-1;
+        notes.remove(note);
+        notes.add(tempLength, note);
+    }
 }
 
