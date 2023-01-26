@@ -10,10 +10,10 @@
             "request": "launch",
            
             //This is used when coding on personal laptop
-           // "vmArgs": "--module-path \"C:/Users/Cip/Documents/School/Semester 4/HOOPDA/javafx-sdk-19.0.2/lib\" --add-modules javafx.controls,javafx.fxml",
+            "vmArgs": "--module-path \"C:/Users/Cip/Documents/School/Semester 4/HOOPDA/javafx-sdk-19.0.2/lib\" --add-modules javafx.controls,javafx.fxml",
             
             //This is used when coding on school desktop
-            "vmArgs": "--module-path \"H:/HOOPDA/javafx-sdk-19.0.2/lib\" --add-modules javafx.controls,javafx.fxml",
+           // "vmArgs": "--module-path \"H:/HOOPDA/javafx-sdk-19.0.2/lib\" --add-modules javafx.controls,javafx.fxml",
             
             "mainClass": "NotebookTest",
             "projectName": "NoteApp_8bfb6f68"

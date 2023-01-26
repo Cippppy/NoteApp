@@ -4,7 +4,7 @@ import java.util.ArrayList;
  * Tests the methods of the Notebook class
  * 
  * @author Christian Cipolletta
- * @version 1/20/23
+ * @version 1/25/23
  */
 public class NotebookTest {
 
