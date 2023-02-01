@@ -41,6 +41,8 @@ public class NotebookTest {
          * Prints out the getNotes and numberOfNotes functions to ensure proper results
          */
         unit1.deleteNote(2);
+        unit1.deleteNote(-1);
+        unit1.deleteNote(7);
         System.out.println(unit1.getNotes());
         System.out.println(unit1.numberOfNotes());
 
@@ -119,7 +121,7 @@ public class NotebookTest {
      * @param note the note to be moved
      */
     public static void moveNoteUpMultiple(Notebook uut, String note) {
-        for (int i=0; i<2; i++) {
+        for (int i=0; i<8; i++) {
             uut.moveNoteUp(note);
         }
     }
@@ -131,7 +133,7 @@ public class NotebookTest {
      * @param note the note to be moved
      */
     public static void moveNoteDownMultiple(Notebook uut, String note) {
-        for (int i=0; i<2; i++) {
+        for (int i=0; i<8; i++) {
             uut.moveNoteDown(note);
         }
     }

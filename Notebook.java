@@ -4,7 +4,7 @@ import java.util.ArrayList;
  * Creates a notebook object that holds different notes
  * 
  * @author Christian Cipolletta
- * @version 1/25/23
+ * @version 2/1/23
  */
 public class Notebook {
 
@@ -56,7 +56,15 @@ public class Notebook {
      * @param position the index of the note to be removed
      */
     public void deleteNote(int position) {
-        notes.remove(position);
+
+        if(position >= notes.size())
+            System.out.println("The position " + position + " is not valid.");
+
+        else if(position < 0)
+            System.out.println("The position " + position + " is not valid.");
+
+        else
+            notes.remove(position);
     }
 
     /**
@@ -76,7 +84,16 @@ public class Notebook {
      * @return note the string inside the desired note
      */
     public String getNote(int position) {
-        return notes.get(position);
+
+        if(position >= notes.size())
+            return "Invalid";
+
+        else if(position < 0)
+            return "Invalid";
+
+        else
+            return notes.get(position);
+
     }
 
     /**
@@ -86,7 +103,16 @@ public class Notebook {
      * @param position the position of the string to be replaced
      */
     public void setNote(String note, int position) {
-        notes.set(position, note);
+
+        if(position >= notes.size())
+            System.out.println("The position " + position + " is not valid.");
+
+        else if(position < 0)
+            System.out.println("The position " + position + " is not valid.");
+
+        else
+            notes.set(position, note);
+
     }
 
     /**
@@ -95,10 +121,18 @@ public class Notebook {
      * @param note the value of the note to be moved
      */
     public void moveNoteUp(String note) {
+        
         int tempIndex = notes.indexOf(note);
-        String tempNote = notes.get(tempIndex-1);
-        notes.set(tempIndex-1, note);
-        notes.set(tempIndex, tempNote);
+
+        if(tempIndex <= 0)
+            System.out.println("The note \"" + note + "\" is at the top.");
+
+        else {   
+            String tempNote = notes.get(tempIndex-1);
+            notes.set(tempIndex-1, note);
+            notes.set(tempIndex, tempNote);
+        }
+
     }
 
     /**
@@ -107,10 +141,18 @@ public class Notebook {
      * @param note the value of the note to be moved
      */
     public void moveNoteDown(String note) {
+
         int tempIndex = notes.indexOf(note);
-        String tempNote = notes.get(tempIndex+1);
-        notes.set(tempIndex+1, note);
-        notes.set(tempIndex, tempNote);
+
+        if(tempIndex == notes.size()-1)
+            System.out.println("The note \"" + note + "\" is at the bottom");
+        
+        else { 
+            String tempNote = notes.get(tempIndex+1);
+            notes.set(tempIndex+1, note);
+            notes.set(tempIndex, tempNote);
+        }
+
     }
 
     /**
